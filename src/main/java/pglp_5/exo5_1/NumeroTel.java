@@ -19,8 +19,12 @@ public class NumeroTel implements Serializable {
 	public String getDescriptif() {
 		return descriptif;
 	}
-
+		//recuperer le numero de telephone
 	public String getNumero() {
 		return numero;
+	}
+	//recuperer le descriptif et le numero
+	public String toString(){
+		return this.getDescriptif()+":"+this.getNumero();
 	}
 }
