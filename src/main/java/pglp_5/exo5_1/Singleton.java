@@ -40,10 +40,10 @@ public enum Singleton {
 		b6.numTelephones(portable6);
 		Personnel chefEquipe = b6.build();
 		
-		GroupePersonnel Departement = new GroupePersonnel("Departement");
-		GroupePersonnel Service = new GroupePersonnel("Service");
-		GroupePersonnel Equipe1 = new GroupePersonnel("Equipe1");
-		GroupePersonnel Equipe2 = new GroupePersonnel("Equipe2");
+		GroupePersonnel Departement = new GroupePersonnel("\n==Departement==");
+		GroupePersonnel Service = new GroupePersonnel("==Service==");
+		GroupePersonnel Equipe1 = new GroupePersonnel("==Equipe1==");
+		GroupePersonnel Equipe2 = new GroupePersonnel("==Equipe2==");
 		
 		Equipe1.add(chefEquipe);
 		Equipe1.add(employe);

@@ -3,30 +3,38 @@ package pglp_5.exo5_1;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class PersonnelDAO extends DAOApp<NumeroTel> {
+public class PersonnelDAO extends DAOApp<Personnel> {
 
-	@Override
-	public NumeroTel create(NumeroTel obj) throws IOException {
-		// TODO Auto-generated method stub
-		return null;
+	public PersonnelDAO(int id) throws IOException {
+		super(id);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public void delete(NumeroTel obj) {
+	public Personnel create(Personnel obj) throws IOException {
 		// TODO Auto-generated method stub
-
+		Personnel perso =null;
+		return perso;
 	}
 
 	@Override
-	public NumeroTel update(NumeroTel obj) throws IOException {
+	public void delete(Personnel obj) {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override
-	public NumeroTel recherche(int id) throws FileNotFoundException, ClassNotFoundException, IOException {
+	public Personnel update(Personnel obj) throws IOException {
 		// TODO Auto-generated method stub
-		return null;
+		Personnel perso = null;
+		return perso;
+	}
+
+	@Override
+	public Personnel find(int id) throws FileNotFoundException, ClassNotFoundException, IOException {
+		// TODO Auto-generated method stub
+		Personnel perso = null;
+		return perso;
 	}
 
 }

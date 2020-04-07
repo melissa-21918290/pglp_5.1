@@ -49,5 +49,62 @@ public class GroupePersonnel implements Hierarchie, Serializable {
 	public void remove(Hierarchie composant) {
 		personne.remove(composant);
 	}
+	
+	
+	
+	
+	
+	
+	public void hierarchie() {
+        Iterator<Hierarchie> ite = personne.iterator();
+        System.out.println("-------" + this.getName() + "-------");
+        while (ite.hasNext()) {
+            Hierarchie c = ite.next();
+            c.print();
+        }
+
+	}    /**
+     * Méthode de hachage.
+     */
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((personne == null) ? 0 : personne.hashCode());
+        result = prime * result + ((nomDuGroupe == null) ? 0 : nomDuGroupe.hashCode());
+        return result;
+    }
+    /**
+     * Méthode de comparaison.
+     */
+   @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        GroupePersonnel other = (GroupePersonnel) obj;
+        if (personne == null) {
+            if (other.personne != null)
+                return false;
+        } else if (!personne.equals(other.personne))
+            return false;
+        if (nomDuGroupe == null) {
+            if (other.nomDuGroupe != null)
+                return false;
+        } else if (!nomDuGroupe.equals(other.nomDuGroupe))
+            return false;
+        return true;
+    }
+
+    
 
 }
+	
+	
+	
+	
+	
+
