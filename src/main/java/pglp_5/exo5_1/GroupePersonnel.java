@@ -64,14 +64,7 @@ public class GroupePersonnel implements Hierarchie, Serializable {
         }
 
 	}    
-   /* @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((personne == null) ? 0 : personne.hashCode());
-        result = prime * result + ((nomDuGroupe == null) ? 0 : nomDuGroupe.hashCode());
-        return result;
-    }*/
+   
     
    @Override
     public boolean equals(Object obj) {

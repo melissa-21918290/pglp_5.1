@@ -75,17 +75,7 @@ public class Personnel implements Hierarchie, Serializable{
 		+ this.fonction + "\ndate de naissance: "+this.dateNaissance + "\n");	
 	}
 	
-	/*@Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((dateNaissance == null) ? 0 : dateNaissance.hashCode());
-        result = prime * result + ((fonction == null) ? 0 : fonction.hashCode());
-        result = prime * result + ((nom == null) ? 0 : nom.hashCode());
-        result = prime * result + ((numTelephones == null) ? 0 : numTelephones.hashCode());
-        result = prime * result + ((prenom == null) ? 0 : prenom.hashCode());
-        return result;
-    }*/
+	
 	
 	@Override
     public boolean equals(Object obj) {
