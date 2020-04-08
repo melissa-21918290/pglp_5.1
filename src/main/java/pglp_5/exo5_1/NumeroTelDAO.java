@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Scanner;
 
+
+
 public class NumeroTelDAO extends DAOApp<NumeroTel> {
 
 	public NumeroTelDAO(int id) throws IOException {
