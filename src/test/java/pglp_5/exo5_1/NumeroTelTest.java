@@ -18,4 +18,10 @@ public class NumeroTelTest {
 		String Type ="portable";
 		assertEquals(Type,numero.getDescriptif());
 	}
+	@Test
+	public void getNumeroTest(){
+		NumeroTel numero = new NumeroTel("portable","0698552310");
+		String num ="0698552310";
+		assertEquals(num, numero.getNumero());
+	}
 }
