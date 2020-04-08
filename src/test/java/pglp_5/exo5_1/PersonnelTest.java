@@ -12,16 +12,16 @@ import org.junit.Test;
 import pglp_5.exo5_1.Personnel.Builder;
 
 public class PersonnelTest {
-	Personnel secretaire;
+	Personnel employe;
 	
 	 @Before
 	    public void setUp() {
 	   
 	        NumeroTel portable = new NumeroTel("portable","0651624519");
-			Builder b = new Builder("bafdel","melissa", "secretaire", LocalDate.of(1995,10,11));
+			Builder b = new Builder("bafdel","melissa", "employe", LocalDate.of(1995,10,11));
 			b.numTelephones(portable);
 			Personnel p = b.build();
-			secretaire = p;
+			employe = p;
 	        
 	 }
 	 
@@ -31,15 +31,15 @@ public class PersonnelTest {
 		 String num ="0651624519";
 		 String nom = "bafdel";
 		 String prenom = "melissa";
-		 String fonction ="secretaire";
+		 String fonction ="employe";
 		 LocalDate date = LocalDate.of(1995, 10, 11);
 		 
-		 assertEquals(desc,secretaire.getNumTelephones().get(0).getDescriptif());
-	        assertEquals(num, secretaire.getNumTelephones().get(0).getNumero());
-	        assertEquals(nom, secretaire.getNom());
-	        assertEquals(prenom, secretaire.getPrenom());
-	        assertEquals(fonction, secretaire.getFonction());
-	        assertEquals(date, secretaire.getDateNaissance());
+		 assertEquals(desc,employe.getNumTelephones().get(0).getDescriptif());
+	        assertEquals(num, employe.getNumTelephones().get(0).getNumero());
+	        assertEquals(nom, employe.getNom());
+	        assertEquals(prenom, employe.getPrenom());
+	        assertEquals(fonction, employe.getFonction());
+	        assertEquals(date, employe.getDateNaissance());
 
 	    }
 	 
@@ -59,7 +59,7 @@ public class PersonnelTest {
 	 
 	 @Test
 	    public void serialisableTest() throws IOException, ClassNotFoundException {
-	        Personnel p = secretaire;
+	        Personnel p = employe;
 	        byte[] serialisable = serialize(p);
 	        byte[] serialisable2 = serialize(p);
 

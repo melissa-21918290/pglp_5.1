@@ -1,9 +1,14 @@
 package pglp_5.exo5_1;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Personnel implements Hierarchie{
+public class Personnel implements Hierarchie, Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private final String nom;
 	private final String prenom;
 	private final String fonction;
@@ -67,4 +72,62 @@ public class Personnel implements Hierarchie{
 		System.out.println(this.nom + " " + this.prenom + ": \nfonction: " 
 		+ this.fonction + "\ndate de naissance: "+this.dateNaissance + "\n");	
 	}
+	
+	/*@Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((dateNaissance == null) ? 0 : dateNaissance.hashCode());
+        result = prime * result + ((fonction == null) ? 0 : fonction.hashCode());
+        result = prime * result + ((nom == null) ? 0 : nom.hashCode());
+        result = prime * result + ((numTelephones == null) ? 0 : numTelephones.hashCode());
+        result = prime * result + ((prenom == null) ? 0 : prenom.hashCode());
+        return result;
+    }*/
+	
+	@Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }      
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Personnel other = (Personnel) obj;
+        if (dateNaissance == null) {
+            if (other.dateNaissance != null) {
+                return false;
+            }        
+        } else if (!dateNaissance.equals(other.dateNaissance)) {       
+            return false;
+        }
+        if (fonction == null) {
+            if (other.fonction != null) {
+                return false;
+            }
+        } else if (!fonction.equals(other.fonction)) {
+            return false;
+        }
+        if (nom == null) {
+            if (other.nom != null)
+                return false;
+        } else if (!nom.equals(other.nom))
+            return false;
+        if (numTelephones == null) {
+            if (other.numTelephones != null) {
+                return false;
+            }
+        } else if (!numTelephones.equals(other.numTelephones))
+            return false;
+        if (prenom == null) {
+            if (other.prenom != null)
+                return false;
+        } else if (!prenom.equals(other.prenom))
+            return false;
+        return true;
+    }
+	
 }
