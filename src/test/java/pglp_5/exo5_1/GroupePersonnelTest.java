@@ -20,7 +20,7 @@ public class GroupePersonnelTest {
 	
 	@Before
 	public void SetUp(){
-		G= new GroupePersonnel("departement");
+		G = new GroupePersonnel("departement");
 		G2 = new GroupePersonnel("groupe personnel 2");
 		G3 = new GroupePersonnel("groupe personnel 3");
 	
