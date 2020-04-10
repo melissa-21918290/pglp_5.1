@@ -1,7 +1,5 @@
 package pglp_5.exo5_1;
-
 import static org.junit.Assert.*;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -9,11 +7,11 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.nio.file.Files;
-
 import org.junit.Before;
 import org.junit.Test;
-
 import junit.framework.Assert;
+
+
 
 public class NumeroTelTest {
 	NumeroTel numero;

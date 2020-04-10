@@ -33,7 +33,7 @@ public class PersonnelDAO extends DAOApp<Personnel> {
 	}
 
 	@Override
-	public Personnel find(int id) throws FileNotFoundException, ClassNotFoundException, IOException {
+	public Personnel find(String string) throws FileNotFoundException, ClassNotFoundException, IOException {
 		// TODO Auto-generated method stub
 		Personnel perso = null;
 		return perso;

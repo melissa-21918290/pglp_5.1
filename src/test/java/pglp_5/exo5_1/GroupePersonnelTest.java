@@ -1,41 +1,44 @@
 package pglp_5.exo5_1;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test; 
+import org.junit.Test;
+
+
+
 
 public class GroupePersonnelTest {
 
-	GroupePersonnel G,G2, G3;
+	GroupePersonnel G,G2,G3;
+	
 	
 	@Before
 	public void SetUp(){
-		G= new GroupePersonnel("groupe personnel");
-		G2 = new GroupePersonnel("groupe personnel n2");
-		G3 = new GroupePersonnel("groupe personnel n3");
+		G= new GroupePersonnel("departement");
+		G2 = new GroupePersonnel("groupe personnel 2");
+		G3 = new GroupePersonnel("groupe personnel 3");
+	
 	}
 	
-	/*@Test
-	public void addTest(){
-		G.add(G3);
-		assertEquals(G.getList().get(0),G3);
-		
+	
+	  
+	@Test
+	public void containsTest(){
+       G.add(G2);
+       G.add(G3);
+       assertEquals("departement", G.getName());
+       assertTrue(G.contains(G2));
+       assertTrue(G.contains(G3));
+     
+       
 	}
-	
-	   @Test
-	    public void removeTest() {
-	        G.add(G2);
-	        G.add(G3);
-	        G.remove(G2);
-	        assertEquals(G.getList().get(0), G3);
-	    }*/
-	
-	
+	   
 	   private Object deserialize(final byte[] bytes) throws ClassNotFoundException, IOException {
 	        ByteArrayInputStream a = new ByteArrayInputStream(bytes);
 	        ObjectInputStream b = new ObjectInputStream(a);

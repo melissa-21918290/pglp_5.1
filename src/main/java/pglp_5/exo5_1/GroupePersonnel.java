@@ -2,6 +2,8 @@ package pglp_5.exo5_1;
 
 import java.util.ArrayList;
 import java.util.List;
+
+
 import java.io.Serializable;
 import java.util.Collections;
 import java.util.Iterator;
@@ -14,7 +16,7 @@ public class GroupePersonnel implements Hierarchie, Serializable {
 	
 	//creer un groupe personnels
 	private String nomDuGroupe;
-	public GroupePersonnel(final String nom){
+	public GroupePersonnel( String nom){
 		this.nomDuGroupe = nom;
 	}
 	
@@ -33,6 +35,11 @@ public class GroupePersonnel implements Hierarchie, Serializable {
 			composant.print();
 		}
 	}
+	
+	public boolean contains(Hierarchie composant) {
+        return personne.contains(composant);
+    }
+
 	
 	//retourne la liste des composants
 	public List<Hierarchie> getList(){

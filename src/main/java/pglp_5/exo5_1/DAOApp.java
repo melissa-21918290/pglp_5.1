@@ -31,7 +31,7 @@ public abstract class DAOApp<T> {
     public abstract T update(T obj) throws IOException;
     
     //recherche de l'information
-    public abstract T find(int id) throws FileNotFoundException, ClassNotFoundException, IOException;
+    public abstract T find(String string) throws FileNotFoundException, ClassNotFoundException, IOException;
     
     //déserialisation
     public Object deserialize(final byte[] bytes) throws ClassNotFoundException, IOException {

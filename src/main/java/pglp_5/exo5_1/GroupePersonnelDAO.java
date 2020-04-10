@@ -30,7 +30,7 @@ public class GroupePersonnelDAO extends DAOApp<GroupePersonnel> {
 	        return groupe;
 	    }
 	  //recherche
-	  public GroupePersonnel find(int id) {
+	  public GroupePersonnel find(String string) {
 	        GroupePersonnel groupe = null;
 	        return groupe;
 	    }

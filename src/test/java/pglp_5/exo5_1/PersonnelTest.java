@@ -1,7 +1,8 @@
 package pglp_5.exo5_1;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -12,6 +13,7 @@ import org.junit.Test;
 import pglp_5.exo5_1.Personnel.Builder;
 
 public class PersonnelTest {
+	DAOApp<Personnel> perso;
 	Personnel employe;
 	
 	 @Before
@@ -26,7 +28,7 @@ public class PersonnelTest {
 	 }
 	 
 	 @Test
-	 public void PersonnelConstTest(){
+	 public void PersonnelsTest(){
 		 String desc ="portable";
 		 String num ="0651624519";
 		 String nom = "bafdel";
@@ -69,7 +71,8 @@ public class PersonnelTest {
 	        Assert.assertEquals(deserialisable, deserialisable2);
 	        Assert.assertEquals(p, deserialisable);
 	        Assert.assertEquals(p, deserialisable2);
-	    }
+	 }
+	 
 	 
 	 
 	 }

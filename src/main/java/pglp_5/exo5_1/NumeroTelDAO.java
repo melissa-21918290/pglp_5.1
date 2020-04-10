@@ -39,8 +39,8 @@ public class NumeroTelDAO extends DAOApp<NumeroTel> {
 	}
 
 	@Override
-	public NumeroTel find(int id) throws FileNotFoundException, ClassNotFoundException, IOException {
-		File search = new File(id + ".txt");
+	public NumeroTel find(String string) throws FileNotFoundException, ClassNotFoundException, IOException {
+		File search = new File( ".txt");
         Object deserialized = null;
         if (search.exists()) {
             byte[] fileContent = Files.readAllBytes(search.toPath());
